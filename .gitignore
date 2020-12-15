@@ -1,5 +1,4 @@
 # ignore assets
-(assets)/
 (db)/*
 !(db)/wp-skeleton.sql
 

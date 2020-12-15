@@ -1,0 +1,1 @@
+Non web or other assets not requiring git tracking go here.
