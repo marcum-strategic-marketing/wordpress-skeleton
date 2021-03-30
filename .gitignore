@@ -2,6 +2,7 @@
 (assets)/
 (db)/*
 !(db)/wp-skeleton.sql
+!(db)/wp-skeleton-understrap.sql
 
 # ignore node dependency directories
 node_modules/
