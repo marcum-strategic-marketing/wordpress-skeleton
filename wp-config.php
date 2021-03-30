@@ -19,17 +19,38 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'wp-skeleton' );
 
-/** MySQL database username */
-define( 'DB_USER', 'wp-skeleton' );
+// Makes array from URL
+$url_array = explode('.',$_SERVER["SERVER_NAME"]);
+// Puts subdomain in variable
+$subdomain = $url_array[0];
 
-/** MySQL database password */
-define( 'DB_PASSWORD', 'wp-skeleton' );
+// Simple conditional to check for staging URL and define DB connection accordingly
+if ($subdomain == 'dev' || $subdomain == 'staging') {
+	/** The name of the database for WordPress */
+	define( 'DB_NAME', 'wp-skeleton' );
 
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+	/** MySQL database username */
+	define( 'DB_USER', 'wp-skeleton' );
+
+	/** MySQL database password */
+	define( 'DB_PASSWORD', 'wp-skeleton' );
+
+	/** MySQL hostname */
+	define( 'DB_HOST', 'localhost' );
+} else {
+	/** The name of the database for WordPress */
+	define( 'DB_NAME', 'wp-skeleton' );
+
+	/** MySQL database username */
+	define( 'DB_USER', 'wp-skeleton' );
+
+	/** MySQL database password */
+	define( 'DB_PASSWORD', 'wp-skeleton' );
+
+	/** MySQL hostname */
+	define( 'DB_HOST', 'localhost' );
+}
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
